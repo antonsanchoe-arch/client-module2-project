@@ -1,12 +1,14 @@
 import React from "react";
-function HomePage() {
-    return (
-        <div className="homePage-conatiner">
-            <h1>Welecome to HeroDex!</h1>
-            <p>Want to discover more information about a villain or super heroe, here you can! What are you wating for? Search more information about your favorite character!</p>
-            <div className="Home-buttons">
-            </div>
-        </div>
-    )
-}
-export default HomePage
+import { Link } from "react-router-dom";
+
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Welcome to the Superheroes Database</h1>
+      <p>Explore all your favorite heroes and villains with their abilities, universe, and power ratings.</p>
+      <Link to="/characters">View All Characters</Link>
+    </div>
+  );
+};
+
+export default HomePage;

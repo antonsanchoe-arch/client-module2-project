@@ -3,27 +3,26 @@ import axios from "axios"
 import CharacterCard from "../components/CharacterCard.jsx"
 
 export default function SearchPage() {
-  // 🔹 Estados principales
   const [query, setQuery] = useState("") // texto de búsqueda
   const [results, setResults] = useState([]) // resultados de personajes
   const [filters, setFilters] = useState({
-    universe: "", //  universo del personaje
-    species: "", //  especie o tipo
+    universe: "", 
+    species: "", 
     alignment: "", //  héroe o villano
   })
 
-  const [universes, setUniverses] = useState([]) // lista para el dropdown de universos
-  const [speciesList, setSpeciesList] = useState([]) // lista para el dropdown de especies
+  const [universes, setUniverses] = useState([]) // lista de universos
+  const [speciesList, setSpeciesList] = useState([]) // lista de especies
   const API_URL = import.meta.env.VITE_SERVER_URL
 
-  //  Al cargar la página, pedimos los personajes para poblar los selectores
+  //pedimos los personajes para poblar los selectores
   useEffect(() => {
     axios
       .get(`${API_URL}/characters`)
       .then((res) => {
         const chars = res.data
 
-        // 🪐 Creamos listas únicas para los filtros
+        //Creamos listas únicas para los filtros
         const uniqueUniverses = [...new Set(chars.map((c) => c.universe))].sort()
         const uniqueSpecies = [...new Set(chars.map((c) => c.species))].sort()
 

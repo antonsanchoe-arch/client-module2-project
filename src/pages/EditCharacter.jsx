@@ -106,4 +106,4 @@ function EditCharacter() {
   )
 }
 
-export default CreateCharacter
+export default EditCharacter

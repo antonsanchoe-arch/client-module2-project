@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import axios from "axios"
+import CreateCharacter from "./CreateCharacterPage"
 
-export default function EditCharacter() {
+function EditCharacter() {
   const { id } = useParams()
   const navigate = useNavigate()
   const API_URL = import.meta.env.VITE_SERVER_URL
@@ -104,3 +105,5 @@ export default function EditCharacter() {
     </div>
   )
 }
+
+export default CreateCharacter

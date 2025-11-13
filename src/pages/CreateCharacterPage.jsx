@@ -1,7 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 
-export default function CreateCharacter() {
+function CreateCharacter() {
   const API_URL = import.meta.env.VITE_SERVER_URL
 
   const [form, setForm] = useState({
@@ -63,5 +63,6 @@ export default function CreateCharacter() {
   )
 }
 
+export default CreateCharacter
 
 

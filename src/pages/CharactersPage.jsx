@@ -28,6 +28,7 @@ export default function CharactersPage() {
       } finally {
         setIsLoading(false)
       }
+      
     }
 
     fetchCharacters()
@@ -37,7 +38,7 @@ export default function CharactersPage() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`${API_URL}/characters/${id}`)
-      // Actualiza la lista local quitando el personaje borrado
+      // Actualizar lista de characters
       setCharacters((prev) => prev.filter((char) => char.id !== id))
     } catch (err) {
       console.error("Error deleting character:", err)

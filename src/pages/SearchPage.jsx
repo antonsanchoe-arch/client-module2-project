@@ -68,16 +68,16 @@ export default function SearchPage() {
   //  Al cambiar filtros o texto, se actualiza automáticamente
   useEffect(() => {
     handleSearch()
-  }, [query, filters]) // se ejecuta cada vez que cambia algo
+  }, [query, filters]) 
 
   return (
     <div className="search-page">
       <h1> search characters</h1>
 
-      {/* ===  CONTROLES DE BÚSQUEDA Y FILTRO === */}
+      {/*  CONTROLES DE BÚSQUEDA Y FILTRO  */}
       <div className="search-controls">
 
-        {/*  INPUT DE NOMBRE */}
+        {/* NOMBRE */}
         <input
           type="text"
           value={query}
@@ -105,7 +105,7 @@ export default function SearchPage() {
           ))}
         </select>
 
-        {/*  FILTRO DE ALINEAMIENTO */}
+        {/*  FILTRO DE rol */}
         <select name="alignment" value={filters.alignment} onChange={handleFilterChange}>
           <option value="">all</option>
           <option value="Hero">Heroes</option>
@@ -116,7 +116,7 @@ export default function SearchPage() {
         <button onClick={handleSearch}>Buscar</button>
       </div>
 
-      {/* ===  RESULTADOS === */}
+      {/*  RESULTADOS  */}
       <div className="search-results">
         {results.length === 0 ? (
           <p>any character with that name</p>

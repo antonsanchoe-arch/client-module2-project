@@ -33,7 +33,7 @@ export default function FavoritesPage() {
             <div key={char.id} className="favorite-item">
               <CharacterCard character={char} />
               <button onClick={() => handleRemove(char.id)} className="remove-btn">
-                🗑 Remove
+                 Remove
               </button>
             </div>
           ))}

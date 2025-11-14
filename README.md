@@ -2,9 +2,6 @@ HeroDex
 
 ## [See the App!](https://herodex-q8kcvq9i3-anton-sanchos-projects.vercel.app/)
 
-![App Logo](<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e959c903-261f-4dd2-ae6b-0ca611549646" />)
-
-
 ## Description
 
 **NOTE -** Describe your project in one/two lines.
@@ -73,7 +70,7 @@ HeroDex
 
 ### Collaborators
 
-Anton Sancho (https://github.com/antonsanchoe-arch)
+[Anton Sancho](https://github.com/antonsanchoe-arch)
 
 
 
